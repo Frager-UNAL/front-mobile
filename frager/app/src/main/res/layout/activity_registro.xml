@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordRegistro" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
