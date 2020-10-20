@@ -44,12 +44,7 @@ class Registro : AppCompatActivity()  {
     fun showError(msgError: String){
         Toast.makeText(this,msgError,Toast.LENGTH_SHORT).show()
     }
-    private fun getRetrofit(): Retrofit {
-        return Retrofit.Builder()
-                .baseUrl("http://192.168.0.6:8080/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-    }
+
     private fun postUser(email:String,name:String,pass:String){
         val queue = Volley.newRequestQueue(this)
         val url = "http://3.238.113.217:8080/users"
@@ -69,11 +64,7 @@ class Registro : AppCompatActivity()  {
                     showError("algo malio sal")
                     println("Error $error.message")
                 })
-
         // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest)
-
-
-
     }
 }
